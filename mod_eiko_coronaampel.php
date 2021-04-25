@@ -12,6 +12,14 @@ require_once __DIR__ . '/helper.php';
 
 
 $OBJECTID = $params->get('OBJECTID','56');
+$ANZEIGEFAELLEGESAMT = $params->get('anzeigeFaelleGesamt','1');
+$ANZEIGEFAELLETOD = $params->get('anzeigeFaelleTod','1');
+$ANZEIGESTERBERATE = $params->get('anzeigeSterberate','1');
+$ANZEIGE7TAGEINZIDENZWERTBUNDESLAND = $params->get('anzeige7TageInzidenzWertBundesland','1');
+$ANZEIGEFAELLEPRO100K = $params->get('anzeigeFaellePro100k','1');
+$ANZEIGEBETROFFENENRATE = $params->get('anzeigeBetroffenenrate','1');
+$ANZEIGEAMPEL = $params->get('anzeigeampel','1');
+$ANZEIGETEXT = $params->get('anzeigetext','1');
 
 
 $class_sfx = htmlspecialchars($params->get('class_sfx'));

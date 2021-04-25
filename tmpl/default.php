@@ -131,7 +131,7 @@ Factory::getDocument()->addScriptDeclaration("
 
 
 ?>
-
+<? if ($ANZEIGEAMPEL == 1): ?>
 
     <div class="block rand">
 	    <h2>Corona-Ampel für den <span id="anzeigeLandkreisname"></span></h2>
@@ -157,7 +157,42 @@ Factory::getDocument()->addScriptDeclaration("
         </div>
         <div style="clear:both;"></div>
 		        <span class="kursiv kleiner">Stand: <span id="anzeigeLetztesUpdate"></span> (Robert-Koch-Institut (RKI), <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank" title="Lizenz: Datenlizenz Deutschland – Namensnennung – Version 2.0">dl-de/by-2-0</a>)</span>
+<?
+if($ANZEIGEFAELLEGESAMT == 1) 
+   {
+   echo '<p>Gesamtfälle: <span id='.'"' . anzeigeFaelleGesamt . '"' . '></span></p>';
+   }
+if($ANZEIGEFAELLETOD == 1) 
+   {
+   echo '<p>Todesfälle: <span id='.'"' . anzeigeFaelleTod . '"' . '></span></p>';
+   }
+if($ANZEIGESTERBERATE == 1) 
+   {
+   echo '<p>STERBERATE: <span id='.'"' . anzeigeSterberate . '"' . ' %></span></p>';
+   }
+if($ANZEIGE7TAGEINZIDENZWERTBUNDESLAND == 1) 
+   {
+   echo '<p>BL 7 Tage Inzidenz: <span id='.'"' . anzeige7TageInzidenzWertBundesland . '"' . ' %></span></p>';
+   }
+if($ANZEIGEFAELLEPRO100K == 1) 
+   {
+   echo '<p>Gesamtälle pro 100.000: <span id='.'"' . anzeigeFaellePro100k . '"' . '></span></p>';
+   }
+if($ANZEIGEBETROFFENENRATE == 1) 
+   {
+   echo '<p>Betroffenenrate: <span id='.'"' . anzeigeBetroffenenrate . '"' . ' %></span></p>';
+   }
+?>
 
     </div>
-
-
+<?php endif; ?>
+<? if ($ANZEIGETEXT == 1): ?>
+<div class="block rand">
+	    <h2>Situationsbericht für den <span id="anzeigeLandkreisname"></span></h2>
+<p>Im <span id="anzeigeLandkreisname"></span> liegt der aktuelle 7-Tage-Inzidenzwert bei <span id="anzeige7TageInzidenzWert"></span> (Stand: <span id="anzeigeLetztesUpdate"></span>). Insgesamt gibt es bisher <span id="anzeigeFaelleGesamt"></span> bestätigte Fälle von COVID-19, darunter <span id="anzeigeFaelleTod"></span> Todesfälle. Die Sterberate beträgt <span id="anzeigeSterberate"></span>.</p>
+<p>Der 7-Tage-Inzidenzwert im gesamten Bundesland <span id="anzeigeBundeslandname"></span> beträgt <span id="anzeige7TageInzidenzWertBundesland"></span>. Bezogen auf die Einwohnerzahl sind das <span id="anzeigeFaellePro100k"></span> Fälle pro 100.000 Einwohner, was einer Betroffenenrate von <span id="anzeigeBetroffenenrate"></span> % infizierter Personen entspricht.</p>
+<div style="clear:both;"></div>
+		        <span class="kursiv kleiner">Daten bereitgestellt durch: (Robert-Koch-Institut (RKI), <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank" title="Lizenz: Datenlizenz Deutschland – Namensnennung – Version 2.0">dl-de/by-2-0</a>)</span>     
+      
+</div>      
+<?php endif; ?>
