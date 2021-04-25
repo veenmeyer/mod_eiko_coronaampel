@@ -160,27 +160,27 @@ Factory::getDocument()->addScriptDeclaration("
 <?
 if($ANZEIGEFAELLEGESAMT == 1) 
    {
-   echo '<p>Gesamtfälle: <span id='.'"' . anzeigeFaelleGesamt . '"' . '></span></p>';
+   echo '<p>Gesamtfälle: <span id="anzeigeFaelleGesamt"> </span></p>';
    }
 if($ANZEIGEFAELLETOD == 1) 
    {
-   echo '<p>Todesfälle: <span id='.'"' . anzeigeFaelleTod . '"' . '></span></p>';
+   echo '<p>Todesfälle: <span id="anzeigeFaelleTod"></span></p>';
    }
 if($ANZEIGESTERBERATE == 1) 
    {
-   echo '<p>STERBERATE: <span id='.'"' . anzeigeSterberate . '"' . ' %></span></p>';
+   echo '<p>STERBERATE: <span id="anzeigeSterberate"> %</span></p>';
    }
 if($ANZEIGE7TAGEINZIDENZWERTBUNDESLAND == 1) 
    {
-   echo '<p>BL 7 Tage Inzidenz: <span id='.'"' . anzeige7TageInzidenzWertBundesland . '"' . ' %></span></p>';
+   echo '<p><span id="anzeigeBundeslandname"></span> 7 Tage Inzidenz: <span id="anzeige7TageInzidenzWertBundesland"> %</span></p>';
    }
 if($ANZEIGEFAELLEPRO100K == 1) 
    {
-   echo '<p>Gesamtälle pro 100.000: <span id='.'"' . anzeigeFaellePro100k . '"' . '></span></p>';
+   echo '<p>Gesamtälle pro 100.000: <span id="anzeigeFaellePro100k"></span></p>';
    }
 if($ANZEIGEBETROFFENENRATE == 1) 
    {
-   echo '<p>Betroffenenrate: <span id='.'"' . anzeigeBetroffenenrate . '"' . ' %></span></p>';
+   echo '<p>Betroffenenrate: <span id="anzeigeBetroffenenrate"> %</span></p>';
    }
 ?>
 

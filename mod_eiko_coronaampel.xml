@@ -13,7 +13,7 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail></authorEmail>
 	<authorUrl></authorUrl>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<description>
 	Anpassungen um den aktuellen 7 Tage Inzidenzwert und eine Coronaampel für einen ausgewählten Landkreis basierend auf den RKI Daten darzustellen. 
 	</description>
