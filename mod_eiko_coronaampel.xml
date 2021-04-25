@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2021 EIKO. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>mod_eiko_coronaampel</name>
+	<author>Ralf Meyer</author>
+	<creationDate>April 2021</creationDate>
+	<copyright>Copyright (c) 2021 EIKO. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+	h4Anpassung um den 7TageInzidenzwert fr einen beliebigen Landkreis in Deutschland in der CoronaAmpel darzustellenh4olliDie folgende Webseite aufrufen a hrefhttpsnpgeocoronanpgeodehubarcgiscomdatasets917fc37a709542548cc3be077a786c170 relnofollowhttpsnpgeocoronanpgeodehubarcgiscomdatasets917fc37a709542548cc3be077a786c170aliliIn der Karte den gewnschten Landkreis suchen und anklicken markierenliliNun wird eine Tabelle angezeigt Die erste Zeile die Angabe der strongOBJECTIDstrong diese merkenliliIm GIST die soeben ermittelte strongOBJECTIDstrong in emZeile 119em als Wert fr den Parameter codelandkreisObjectIdcode angebenliolpSiehe auch a hrefhttpswwwfeuerwehrgruenwalddecovid19ampel relnofollowhttpswwwfeuerwehrgruenwalddecovid19ampela Grundlage fr dieses GISTppLizenz des GISTQuellcodes CC0ppBentigte Angaben zur Datenquelle a hrefhttpsrkide relnofollowRobertKochInstitut RKIa unter der a hrefhttpswwwgovdatadedldeby20 relnofollowdldeby20a Lizenzp
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_eiko_coronaampel">mod_eiko_coronaampel.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+					name="OBJECTID"
+					type="int"
+					default="56"
+					label="Objekt ID des Landkreises"
+					description=""
+				/>
+
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" priority="1" name="mod_eiko_coronaampel">https://einsatzkomponente.joomla100.com/update/mod_eiko_coronaampel.xml</server>
+	</updateservers>
+
+</extension>

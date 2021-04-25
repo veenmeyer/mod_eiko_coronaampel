@@ -1,0 +1,107 @@
+
+
+
+        .fett{
+            font-weight: 600;
+        }
+        .kursiv {
+            font-style: italic;
+        }
+        .block {
+            display: block;            
+            text-align:center;
+        }
+        .kleiner {
+            font-size:smaller;
+        }
+        .rand {
+            padding: 0px; 
+            margin-left: 0px; 
+            margin-top: 20px; 
+            padding-top: 20px;
+            margin-bottom: 20px; 
+            border: 8px solid #c90024;		
+        }
+        .gruen {
+            padding-left: 5px;
+            padding-right: 5px;
+            color: white;
+            background-color: green;
+        }
+        .gelb {
+            padding-left: 5px;
+            padding-right: 5px;
+            color: black;
+            background-color: yellow;
+        }
+        .rot {
+            padding-left: 5px;
+            padding-right: 5px;
+            color: white;
+            background-color: red;
+        }
+        /* Farbverlauf fuer Inzidenzzahl <=100 (normal) */
+        .farbverlauf {
+            background-image: linear-gradient(90deg, green 20%, yellow 33%, yellow 33%, yellow 48%, red 75%); 
+            width:70%;
+            height:50px;
+            margin: 0 auto;
+            position: relative;
+        }
+        /* Farbverlauf fuer Inzidenzzahl >100 (mit 3 weissen Auslassungsstreifen*/
+        .farbverlauf_ext {
+            background-image: linear-gradient(90deg, green 20%, yellow 33%, yellow 33%, yellow 48%, red 75%, red 80.9%, white 81%, white 82%, red 82.1%, red 83%, white 83.1%, white 84%, red 84.1%, red 85%, white 85.1%, white 86%, red 86.1%, rgb(150, 0, 0) 95%); 
+            width:70%;
+            height:50px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .divGrenzwert {
+            display: flex; 
+            justify-content: 
+            flex-end;align-items: 
+            flex-end; height:100%;
+            color:grey;
+            font-size:smaller;
+        }
+        .divAktuellerWert {
+            border: 1px solid;
+            padding:5px;
+            background:#fff;
+            margin-bottom: 5px;
+            margin-right: -40px; 
+            margin-top:70px;
+            font-weight:700;
+            display: inline-block;
+            text-align:center;
+        }
+        #container_farbverlauf {
+            display:inline-block;
+            width:100%;
+            text-align:center;
+            height:110px;
+            margin-top:10px;
+        }
+        #untererGrenzwert {
+            width:33%;
+            border-right: 2px solid; 
+            border-right-color: grey;
+            height:70px;
+            float:left;
+        }
+        #obererGrenzwert {
+            width:33%;
+            border-right: 2px solid; 
+            border-right-color: grey; 
+            height:70px;
+            text-align:right;
+            float: left;
+        }
+        #aktuellerWert {
+            border-right: 5px solid;
+            height:80px;
+            text-align:right;
+            z-index: 1;
+            position: absolute;
+            float: left;
+        }
